@@ -1,13 +1,13 @@
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import '../styles/globals.css'
 
-const geist = Geist({
+const inter = Inter({
   subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={geist.className}>
+    <div className={inter.className}>
       <Component {...pageProps} />
     </div>
   )
