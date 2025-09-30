@@ -1,0 +1,718 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    padding: 2rem 0;
+  }
+}
+
+.heroContent {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.heroTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000000;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroSubtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #666666;
+  letter-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(26, 10, 10, 0.3) 70%,
+    rgba(26, 10, 10, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+/* Location Section */
+.locationSection {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .locationSection {
+    padding: 4rem 0;
+  }
+}
+
+.locationContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .locationContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.sectionTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #e5e5e5;
+  border-radius: 2px;
+}
+
+.addressCard,
+.contactCard {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  border: 2px solid #e5e5e5;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.addressCard::before,
+.contactCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.addressIcon,
+.contactIcon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.addressTitle,
+.contactTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.addressText,
+.contactText {
+  color: #333333;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.phoneLink,
+.emailLink {
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.phoneLink:hover,
+.emailLink:hover {
+  color: #000000;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.mapContainer {
+  position: relative;
+}
+
+.mapWrapper {
+  background: #ffffff;
+  border-radius: 15px;
+  border: 2px solid #e5e5e5;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.googleMap {
+  margin: 2rem 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mapActions {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.directionsButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.directionsButton:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mapPlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  animation: mapShimmer 4s ease-in-out infinite;
+}
+
+@keyframes mapShimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+.mapContent {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+}
+
+.mapIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.mapTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.mapText {
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.mapFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mapFeature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #333333;
+  font-size: 1rem;
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+}
+
+/* Hours Section */
+.hoursSection {
+  padding: 6rem 0;
+  background: #f8f8f8;
+}
+
+.hoursGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.hoursCard {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hoursCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hoursCard:hover::before {
+  opacity: 1;
+}
+
+.hoursCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hoursIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hoursTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.hoursTime {
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hoursNote {
+  color: #333333;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Events Section */
+.eventsSection {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.eventsContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.eventCard {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.eventCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eventCard:hover::before {
+  opacity: 1;
+}
+
+.eventCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.eventIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.eventTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.eventDescription {
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.eventSchedule {
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Reservation Section */
+.reservationSection {
+  padding: 6rem 0;
+  background: #f8f8f8;
+}
+
+.reservationContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reservationTitle {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.reservationText {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #f5f5f5;
+  margin-bottom: 4rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.reservationMethods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.reservationMethod {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reservationMethod::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reservationMethod:hover::before {
+  opacity: 1;
+}
+
+.reservationMethod:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.methodIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.methodTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.methodDescription {
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.methodButton {
+  background: #e5e5e5;
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+.methodButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(218, 165, 32, 0.5);
+  background: #000000;
+}
+
+.methodNote {
+  color: #000000;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.ctaText {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #f5f5f5;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: #e5e5e5;
+  color: #000000;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+  border: 2px solid transparent;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(218, 165, 32, 0.5);
+  background: #000000;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #000000;
+  padding: 1rem 2.5rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #000000;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .locationContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .addressCard,
+  .contactCard {
+    padding: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .addressIcon,
+  .contactIcon {
+    font-size: 2rem;
+  }
+  
+  .mapWrapper {
+    padding: 1.5rem;
+  }
+  
+  .googleMap iframe {
+    height: 300px;
+  }
+  
+  .mapIcon {
+    font-size: 3rem;
+  }
+  
+  .mapTitle {
+    font-size: 1.5rem;
+  }
+  
+  .mapText {
+    font-size: 1rem;
+  }
+  
+  .hoursGrid,
+  .eventsContent,
+  .reservationMethods {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hoursCard,
+  .eventCard,
+  .reservationMethod {
+    padding: 2rem 1.5rem;
+  }
+  
+  .reservationTitle,
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .reservationText,
+  .ctaText {
+    font-size: 1.1rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}

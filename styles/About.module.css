@@ -1,0 +1,454 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/gallery4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    padding: 2rem 0;
+  }
+}
+
+.heroContent {
+  text-align: center;
+  z-index: 3;
+  position: relative;
+}
+
+.heroTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroSubtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* Main Content */
+.mainContent {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 4rem 0;
+  }
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.textContent {
+  max-width: none;
+}
+
+.sectionTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #000000;
+  border-radius: 2px;
+}
+
+.paragraph {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.highlightBox {
+  background: #f8f8f8;
+  padding: 3rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highlightBox::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #e5e5e5;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.highlightTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.highlightText {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333333;
+  font-style: italic;
+  text-align: center;
+}
+
+.imageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imagePlaceholder {
+  height: 200px;
+  background: linear-gradient(135deg, rgba(45, 27, 27, 0.8) 0%, rgba(26, 10, 10, 0.9) 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e5e5e5;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.imagePlaceholder:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(218, 165, 32, 0.1) 0%,
+    transparent 70%
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+.imageText {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+
+.imageText p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 6rem 0;
+  background: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+  .valuesSection {
+    padding: 4rem 0;
+  }
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.valueCard {
+  background: linear-gradient(135deg, rgba(45, 27, 27, 0.8) 0%, rgba(26, 10, 10, 0.9) 100%);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.valueCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.valueCard:hover::before {
+  opacity: 1;
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+.valueTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.valueDescription {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 4rem 0;
+  }
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}
+
+.ctaText {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .ctaText {
+    font-size: 1rem;
+  }
+}
+
+.ctaButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  background: #333333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .paragraph {
+    font-size: 1.1rem;
+  }
+  
+  .highlightBox {
+    padding: 2rem;
+  }
+  
+  .highlightTitle {
+    font-size: 1.5rem;
+  }
+  
+  .highlightText {
+    font-size: 1.1rem;
+  }
+  
+  .imagePlaceholder {
+    height: 150px;
+  }
+  
+  .imageIcon {
+    font-size: 2.5rem;
+  }
+  
+  .imageText p {
+    font-size: 1rem;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .valueCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaText {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,544 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 0 4rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+}
+
+.heroContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #666666;
+  font-weight: 400;
+}
+
+/* Menu Section */
+.menuSection {
+  padding: 4rem 0;
+  background: #f8f8f8;
+}
+
+.menuContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.menuInfo {
+  padding: 2rem 0;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.menuDescription {
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.menuFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.feature:hover {
+  border-color: #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+}
+
+.featureText {
+  font-weight: 500;
+  color: #000000;
+}
+
+.menuViewer {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pdfContainer {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.downloadSection {
+  text-align: center;
+}
+
+.downloadButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.downloadButton:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.viewMenuButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  display: none; /* Hidden by default, shown on mobile */
+}
+
+.viewMenuButton:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+/* Featured Section */
+.featuredSection {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featuredItem {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.featuredItem:hover {
+  border-color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.itemIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.itemTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.itemDescription {
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.itemPrice {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Wine Section */
+.wineSection {
+  padding: 4rem 0;
+  background: #f8f8f8;
+}
+
+.wineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.wineCategory {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.wineList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.wineItem:last-child {
+  border-bottom: none;
+}
+
+.wineName {
+  color: #333333;
+  font-weight: 500;
+}
+
+.winePrice {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.125rem;
+  }
+  
+  .menuContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.875rem;
+  }
+  
+  .menuDescription {
+    font-size: 1rem;
+  }
+  
+  .featuredGrid,
+  .wineGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featuredItem,
+  .wineCategory {
+    padding: 1.5rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.875rem;
+  }
+  
+  .ctaText {
+    font-size: 1rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Hide PDF iframe on mobile, show button instead */
+  .pdfIframe {
+    display: none;
+  }
+  
+  .viewMenuButton {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop: Hide view button, show iframe */
+@media (min-width: 769px) {
+  .viewMenuButton {
+    display: none;
+  }
+  
+  .pdfIframe {
+    display: block;
+  }
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  background: #ffffff;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666666;
+  cursor: pointer;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: #f0f0f0;
+  color: #000000;
+}
+
+.modalBody {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.modalPdf {
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  border: none;
+}
+
+.modalFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5e5e5;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.modalDownloadButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.modalDownloadButton:hover {
+  background: #333333;
+  transform: translateY(-1px);
+}
+
+/* Mobile-specific PDF improvements */
+@media (max-width: 768px) {
+  .modalContent {
+    max-width: 95vw;
+    max-height: 95vh;
+    margin: 0.5rem;
+  }
+  
+  .modalHeader {
+    padding: 0.75rem 1rem;
+  }
+  
+  .modalTitle {
+    font-size: 1.1rem;
+  }
+  
+  .modalFooter {
+    padding: 0.75rem 1rem;
+  }
+  
+  .modalPdf {
+    min-height: 50vh;
+  }
+}

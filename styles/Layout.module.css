@@ -1,0 +1,335 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+}
+
+.logo {
+  flex: 1;
+}
+
+.logoLink {
+  display: block;
+  text-decoration: none;
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.logoLink:hover {
+  color: #000000;
+  text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+}
+
+.logoText {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+  color: #000000;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    font-size: 1.25rem;
+  }
+}
+
+.logoSubtext {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 0.25rem;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .logoSubtext {
+    font-size: 0.75rem;
+    display: none; /* Hide on mobile to save space */
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navLinksOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.navLink {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.1rem;
+  }
+  
+  .navLink:last-child {
+    border-bottom: none;
+  }
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: all 0.2s ease;
+  transform: translateX(-50%);
+}
+
+.navLink:hover::before {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: #666666;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+  }
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: #000000;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menuToggle:hover .hamburger {
+  background: #666666;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}
+
+.footer {
+  background: #f8f8f8;
+  border-top: 1px solid #e5e5e5;
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+  
+  .footerContent {
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+.footerSection {
+  text-align: center;
+}
+
+.footerTitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.25rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footerSubtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footerText {
+  color: #666666;
+  line-height: 1.6;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.instagramLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9rem;
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.instagramLink:hover {
+  color: #000000;
+}
+
+.instagramIcon {
+  font-size: 1rem;
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+  color: #666666;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+  
+  .logoText {
+    font-size: 2rem;
+  }
+  
+  .logoSubtext {
+    font-size: 0.8rem;
+  }
+  
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #f8f8f8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: right 0.3s ease;
+    z-index: 99;
+  }
+  
+  .navLinksOpen {
+    right: 0;
+  }
+  
+  .navLink {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+  
+  .menuToggle {
+    display: flex;
+  }
+  
+  .menuToggle.active .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menuToggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menuToggle.active .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

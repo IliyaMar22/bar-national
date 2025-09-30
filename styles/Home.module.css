@@ -1,0 +1,416 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 0 1.5rem;
+  }
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.heroSlogan {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .heroSlogan {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.heroDescription {
+  margin-bottom: 3rem;
+}
+
+.heroDescription p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.heroButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(26, 10, 10, 0.3) 70%,
+    rgba(26, 10, 10, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+/* Features Section */
+.features {
+  padding: 6rem 0;
+  background: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 4rem 0;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #000000;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+.featureCard {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .featureCard {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.featureCard:hover {
+  border-color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+
+.featureTitle {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.featureDescription {
+  color: #666666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Atmosphere Section */
+.atmosphere {
+  padding: 6rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.atmosphereContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.atmosphereDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.atmosphereStats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.875rem;
+  color: #666666;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  background: #f8f8f8;
+}
+
+.ctaContent {
+  text-align: center;
+  padding: 4rem 3rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.phoneButton {
+  background: transparent;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.phoneButton:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .baroqueOrnament::before,
+  .baroqueOrnament::after {
+    display: none;
+  }
+  
+  .heroSlogan {
+    font-size: 1.2rem;
+  }
+  
+  .heroDescription p {
+    font-size: 1rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButton,
+  .secondaryButton,
+  .phoneButton {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .featureCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .atmosphereStats {
+    gap: 2rem;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+  }
+  
+  .ctaContent {
+    padding: 3rem 2rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaText {
+    font-size: 1.1rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
